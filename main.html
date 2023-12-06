@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Frameset Example</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+
+    #leftColumn, #rightColumn {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #centerColumn {
+      flex: 1; /* Center column takes up 2/4 of the available space */
+    }
+
+    .frame {
+      flex: 1;
+      border: none;
+    }
+
+    #leftFrame {
+      background-color: #000000; /* Adjust the background color as needed */
+    }
+
+    #centerFrame {
+      background-color: #00ff00; /* Adjust the background color as needed */
+      width: 100%;
+      height: 99.50%;
+    }
+
+    #rightFrame {
+      background-color: #0000ff; /* Adjust the background color as needed */
+    }
+
+    .lowerLeft, .lowerRight {
+      flex: 1;
+      border: none;
+    }
+
+    .lowerLeft {
+      background-color: #ff0000; /* Adjust the background color as needed */
+    }
+
+    .lowerRight {
+      background-color: #ffff00; /* Adjust the background color as needed */
+    }
+  </style>
+</head>
+<body>
+  <div id="leftColumn">
+    <!-- Left Frame -->
+    <iframe id="leftFrame" class="frame" src="left.html" name="leftFrame"></iframe>
+    <!-- Lower Right Frame -->
+    <iframe id="lowerLeftFrame" class="lowerLeft" src="lowerLeft.html" name="lowerLeftFrame"></iframe>
+  </div>
+  <div id="centerColumn">
+    <!-- Center Frame -->
+    <iframe id="centerFrame" class="frame" src="center.html" name="centerFrame"></iframe>
+  </div>
+  <div id="rightColumn">
+    <!-- Right Frame -->
+    <iframe id="rightFrame" class="frame" src="right.html" name="rightFrame"></iframe>
+    <!-- Lower Left Frame -->
+    <iframe id="lowerRightFrame" class="lowerRight" src="lowerRight.html" name="lowerRightFrame"></iframe>
+  </div>
+</body>
+</html>
